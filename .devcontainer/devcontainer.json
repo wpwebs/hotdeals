@@ -1,0 +1,27 @@
+{
+    "name": "HotDeals",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "remote.SSH.showLoginTerminal": true
+            },
+            "extensions": [
+                "github.vscode-pull-request-github",
+                "ms-python.debugpy",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.jupyter" 
+            ],
+            "folders": [
+                {
+                    "path": "/code"
+                }
+            ]
+        }
+    },
+    "remoteUser": "appuser"
+}
