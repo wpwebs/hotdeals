@@ -318,7 +318,7 @@ async def handle_hotdeals(update: Update, context: CallbackContext):
     delete_all_messages(bot_token, chat_id, topic_id)
 
     scan_time = time.strftime('%H:%M %a, %Y/%m/%d')
-    message_scan_time = f'Hot deals in next {params['days']} days, were scanned at *{scan_time}*\n'
+    message_scan_time = f"Hot deals in next {params['days']} days, were scanned at *{scan_time}*\n"
     send_message_to_topic(bot_token, chat_id, topic_id, message_scan_time)
 
     for golfcourse in golfcourses:
@@ -345,8 +345,8 @@ def main():
     # Log that the bot is starting
     logger.info("Starting bot")
     
-    message = "**Search command:**\n`/hotdeals [golf_courses=SJ, days=7, timemin=10:00AM, timemax=3:00PM, pricemin=8, pricemax=60]`"
-    send_message_to_topic(bot_token, chat_id, topic_id, message)
+    # message = "**Search command:**\n`/hotdeals [golf_courses=SJ, days=7, timemin=10:00AM, timemax=3:00PM, pricemin=8, pricemax=60]`"
+    # send_message_to_topic(bot_token, chat_id, topic_id, message)
     
     application = Application.builder().token(bot_token).build()
 
